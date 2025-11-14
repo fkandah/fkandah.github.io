@@ -9,7 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <!--<link href="assets/img/favicon.png" rel="icon">-->
+  <link href="assets/img/logo-new.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -126,52 +127,101 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+<section id="about" class="about section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+    <div class="row gy-4">
+      <!-- Image column becomes a Swiper -->
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="about-image-swiper swiper init-swiper">
+
+          <!-- Swiper config (uses your JSON-in-script init pattern) -->
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": { "delay": 5000 },
+              "slidesPerView": 1,
+              "pagination": {
+                "el": ".about-swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <img src="assets/img/Group1.png" class="img-fluid w-100 object-fit-cover" alt="About image 1">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <img src="assets/img/about.jpg" class="img-fluid w-100 object-fit-cover" alt="About image 2">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <img src="assets/img/about.jpg" class="img-fluid w-100 object-fit-cover" alt="About image 3">
+            </div>
           </div>
-          <div class="col-lg-6 order-2 order-lg-1 content">
-            <h3 >Our Mission</h3>
-            <p class="fst-italic" style="margin-bottom: 5px;">
-            Our lab is dedicated to advancing the field of cybersecurity through innovative research that develops practical, effective solutions to protect individuals and organizations from modern digital threats. As cyber risks increasingly involve data-driven and AI-enabled techniques, we work to anticipate these emerging challenges while building defenses that remain adaptable over time.
-            Our mission is supported by: </p>
-            
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Pushing the boundaries of cybersecurity and staying ahead of both traditional and AI-assisted threats,</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;"> <em>Adopting a collaborative, multidisciplinary approach grounded in strong scientific rigor and ethical conduct, and</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 5px;"> <em>Leveraging advanced technologies and Artificial Intelligence to better understand adversarial behavior and to design resilient countermeasures.</em></p>
-           
 
-            <p class="fst-italic"> We aim to make the digital world a safer place by developing practical tools, methods, and technologies that help individuals and organizations confidently navigate a rapidly evolving cyber landscape.</p>
-
-           
-           
-            <h3>Our Vision</h3>
-            <p class="fst-italic" style="margin-bottom: 5px;">
-            Our vision is a future where digital security is seamlessly integrated into everyday life, enabling people and organizations to safely and confidently operate in the digital world. As AI becomes a larger part of both attack and defense, we work to ensure that systems remain secure even as adversaries evolve.
-            We pursue this vision through:</p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Research that develops next-generation security techniques, privacy-preserving systems, and resilient architectures,</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Strategic partnerships with academia and industry leaders to translate research into real-world solutions, and </em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Continued investment in education and awareness to strengthen understanding of cybersecurity challenges–inclduing those shaped by AI capabilities.</em></p>
-            
-            <p class="fst-italic"> Our ultimate goal is to build a digital environment that remains secure and resilient even as new, increasingly AI-driven threats emerge—an environment where individuals and organizations can operate, innovate, and thrive with trust and confidence.
-
-            </p>
-          </div>
+          <!-- Dots -->
+          <div class="swiper-pagination about-swiper-pagination mt-3"></div>
         </div>
-
       </div>
 
-    </section><!-- /About Section -->
+      <!-- Text column (unchanged) -->
+      <div class="col-lg-6 order-2 order-lg-1 content">
+        <h3>Our Mission</h3>
+        <p class="fst-italic" style="margin-bottom: 5px;">
+          Our lab is dedicated to advancing the field of cybersecurity through innovative research that develops practical, effective solutions to protect individuals and organizations from modern digital threats. As cyber risks increasingly involve data-driven and AI-enabled techniques, we work to anticipate these emerging challenges while building defenses that remain adaptable over time.
+          Our mission is supported by:
+        </p>
+
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">
+          <em>Pushing the boundaries of cybersecurity and staying ahead of both traditional and AI-assisted threats,</em>
+        </p>
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">
+          <em>Adopting a collaborative, multidisciplinary approach grounded in strong scientific rigor and ethical conduct, and</em>
+        </p>
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 5px;">
+          <em>Leveraging advanced technologies and Artificial Intelligence to better understand adversarial behavior and to design resilient countermeasures.</em>
+        </p>
+
+        <p class="fst-italic">
+          We aim to make the digital world a safer place by developing practical tools, methods, and technologies that help individuals and organizations confidently navigate a rapidly evolving cyber landscape.
+        </p>
+
+        <h3>Our Vision</h3>
+        <p class="fst-italic" style="margin-bottom: 5px;">
+          Our vision is a future where digital security is seamlessly integrated into everyday life, enabling people and organizations to safely and confidently operate in the digital world. As AI becomes a larger part of both attack and defense, we work to ensure that systems remain secure even as adversaries evolve.
+          We pursue this vision through:
+        </p>
+
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">
+          <em>Research that develops next-generation security techniques, privacy-preserving systems, and resilient architectures,</em>
+        </p>
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">
+          <em>Strategic partnerships with academia and industry leaders to translate research into real-world solutions, and</em>
+        </p>
+        <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">
+          <em>Continued investment in education and awareness to strengthen understanding of cybersecurity challenges–inclduing those shaped by AI capabilities.</em>
+        </p>
+
+        <p class="fst-italic">
+          Our ultimate goal is to build a digital environment that remains secure and resilient even as new, increasingly AI-driven threats emerge—an environment where individuals and organizations can operate, innovate, and thrive with trust and confidence.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- /About Section -->
+
 
 
     <!-- Clients Section -->
@@ -365,9 +415,9 @@
                 <h4>Consultation</h4>
                 <p>We offer customized consulting services for organizations seeking to improve their cybersecurity posture or align with compliance standards.</p>
                 <p> <strong>Risk Assessment and Governance:</strong> Evaluate organizational policies, data flow, and access controls.</p>
-                <p> <strong>Security Architecture Review:</strong> Assess and redesign IT infrastructure for defense-in-depth.</p>
+                <p> <strong>Security Architecture Review:</strong> Assess and redesign IT/OT infrastructure for defense-in-depth.</p>
                 <p> <strong>Incident Response Planning:</strong> Develop and test response playbooks to reduce breach impact.</p>
-                <p> <strong>Compliance Support: </strong>Align with standards such as ISO 27001, NIST CSF, and HIPAA.</p>
+                <!--<p> <strong>Compliance Support: </strong>Align with standards such as ISO 27001, NIST CSF, and HIPAA.</p>-->
                 <p> <strong>Awareness Training: </strong>Tailored sessions on phishing defense, password management, and secure system administration.</p>
 
               </div>
@@ -623,7 +673,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Contact Us</p>
+        <p>Contact Our Lab</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
