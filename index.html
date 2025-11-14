@@ -1,749 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Network Communication Lab</title>
+    <link rel="icon" href="img/logo_nobackground.png">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="css/flexslider.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/queries.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+      </head>
+      <body id="top">
+        <header id="home">
+          <nav>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                  <nav class="pull">
+                    <ul class="top-nav">
+                      
+                      <!--  <li><a href="#intro">About us <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>  -->
+                      <li><a href="#features">Navigate <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <!--  <li><a href="#responsive">Responsive Design <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>  -->
+                      <!--  <li><a href="#portfolio">Portfolio <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>  -->
+                      <!--  <li><a href="#testing">testing <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>  -->
+                      <!--  <li><a href="#team">Team <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>  -->
+                      <li><a href="#contact">Get in Touch <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <section class="hero" id="hero">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-right navicon">
+                  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center ">
+                  <h1 class="animated fadeInDown">NETWORK COMMUNICATION LAB<!--<span>LAB</span>--></h1>
+                  <h2 style="font-size: 25pt;"class="animated fadeInUp delay-05s">Cyber-physical and Cybersecurity</h2>
+                </div>
+              </div>
+              <!--<div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                  <a href="http://tympanus.net/codrops/?p=19439" class="learn-more-btn">Back to the article</a>
+                </div>
+              </div> -->
+            </div>
+          </section>
+        </header>
+        
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CNCL</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+        <!-- -->
+        <section class="text-center" id="responsive">
+          <div class="container-fluid nopadding responsive-services">
+            <div class="wrapper">
+              <div class="iphone">
+                <div class="wp3"></div>
+              </div>
+              <div class="fluid-white"></div>
+            </div>
+            <div class="container designs">
+              <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                  <div id="servicesSlider">
+                    <ul class="slides">
+                      <li>
+                        <h1 class="arrow">Farah Kandah, PhD</h1>
+                        <!--<div class="row">
+                          <div class="col-md-12">
+                            <ul class="social-buttons">
+                              <li><a href="https://www.linkedin.com/in/farah-kandah-1a440528/" target="_blank" class="social-btn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                              <li><a href="https://scholar.google.com/citations?hl=en&user=8JH5MpIAAAAJ" target="_blank" class="social-btn"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                              <li><a href="#contact" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                          </div>
+                        </div>-->
+                        <p style="text-align:left;font-size: 13pt;color:#0C2340;">I am an IEEE Senior Member and Tenured Associate Professor in <a href="https://www.eng.auburn.edu/comp/#gsc.tab=0" target="_blank"> Computer Science and Software Engineering (CSSE)</a> at the <a href="https://www.auburn.edu" target="_blank"> Auburn University </a>. <br><br>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+                        <!--I am the recipient of the Outstanding Tenured/Tenure-Track Faculty Teaching Computer Science and Engineering Award (2017), the Outstanding Researcher, Computer Science and Engineering award (2016), and the UC Foundation Professorship (2014). <br><br> -->
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+                        My research is primarily focused on developing robust cybersecurity methodologies, including the creation of advanced schemes, techniques, algorithms, and solutions specifically tailored to enhance computer network security. 
+                        <!--This involves not only improving network performance but also ensuring secure transactions and communication between users. -->
+                        A key aspect of my work is to identify, counteract, and mitigate various forms of cyber threats and malicious attacks, thereby fortifying the network's defenses against potential security breaches. <br><br>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+                        I am the founder and the lead director of the Network communication Laboratory (NCL) that leverages expertise in cyber-phsical systems, cybersecurity, smart communication, threat hunting, Blockchain, and trust management with research focuses on urban science, Internet of Things, public safety, smart networking design, smart autonomous/connected vehicle networks, and Software-Defined Networks.
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+                        <!--My research work strongly relies on providing well-designed schemes, techniques, algorithms, and solutions to solve problems and improve the performance of computer networks as well as providing secure transactions and communication among network's users by eliminating and mitigating malicious attacks. My research interests and experience span a wide range of topics in wireless ad-hoc networks from stationary to mobile ad-hoc networks. </p>-->
 
-  <style>
-    body {
-      -webkit-user-select: none; /* Disable text selection */
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  </style>
-  <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', event => event.preventDefault());
-  </script>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <ul class="social-buttons">
+                              <li><a href="https://www.linkedin.com/in/farah-kandah-1a440528/" target="_blank" class="social-btn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                              <li><a href="https://scholar.google.com/citations?hl=en&user=8JH5MpIAAAAJ" target="_blank" class="social-btn"><i class="fab fa-google" aria-hidden="true"></i></a></li>
+                              <li><a href="#contact" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                          </div>
+                        </div>
 
-</head>
+                      </li>
+                    
+                      <li>
+                        <h1 class="arrow">Latest News</h1>
+                        <p style="text-align:left;font-size: 13pt;color:#0C2340;"><i class="fa fa-arrow-right" aria-hidden="true"></i>  Our project "Beginnings: Creating and Sustaining a Diverse Community of Expertise in Quantum Information Science (EQUIS) Across the Southeastern United States" was funded by NSF.</p>
+                        <p style="text-align:left;font-size: 13pt;color:#0C2340;"><i class="fa fa-arrow-right" aria-hidden="true"></i>   Our paper "DECAY: Dynamic Evaluation and Component Analysis for Enhancing Trust Management" was accepted at the 42nd IEEE International Conference on Consumer Electronics (ICCE 2024). </p>
+                        <p style="text-align:left;font-size: 13pt;color:#0C2340;"><i class="fa fa-arrow-right" aria-hidden="true"></i>   Our paper "B2-C2: Blockchain-Based Flow Control Consistency for Multi-Controller SDN Architecture" was accepted at the 42nd IEEE International Conference on Consumer Electronics (ICCE 2024). </p>
+                        <p style="text-align:left;font-size: 13pt;color:#0C2340;"><i class="fa fa-arrow-right" aria-hidden="true"></i>   Our paper "Zero Trust+: A Trusted-Based Zero Trust Architecture for IoT at Scale" was accepted at the 42nd IEEE International Conference on Consumer Electronics (ICCE 2024). </p>
+                      
+                      
+                        
+                      </li>
+                      <!--
+                      <li>
+                        <h1 class="arrow">Farah Kandah, PhD</h1>
+                        <p>Before joining Auburn University, I was a UC Foundation Associate Professor in Computer Science and Engineering Department at the University of Tennessee at Chattanooga. I led the Cybersecurity and Cyber-Physical Systems thrust at the SimCenter (UTC). worked in research and teaching as I was granted a research and teaching assistantship from the Department of Computer Science at North Dakota State University. Through my PhD, I conducted research with Dr. Kendall Nygard and Dr. Weiyi Zhang in wireless networks, Wireless Mesh Networks, Interference awareness, networks survivability, and security and privacy in wireless networks. 
+                       In 2005, I received my Master's degree in Computer Science from the University of Jordan. I received my Bachelor of Science in Computer Science from the Hashemite University  (Jordan) in 2012.</p>
+                      </li>-->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-<body class="index-page" oncontextmenu="return false;" >
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">CNCL</h1>
-        <span>.</span>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Research Framework</a></li>
-          <li><a href="#features">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container">
-
-        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-xl-6 col-lg-8">
-            <h3 style="color:#FFC451">WE ARE A TEAM OF TALENTED RESEARCHERS</h3>
-            <h2>Cyber Network Communication Laboratory<span>.</span></h2>
-            <h3>where <span style="color:#FFC451">AI</span> meets <br>Networking and Cybersecurity <br>Solutions</h3>
+        <section class="dark-bg text-center contact-wrap" id="SocialNetwork">
+        <div class="container">
+          <div class="row contact-details">
+            <a href="#features" class="up-btn"><i class="fa fa-chevron-down"></i></a>
           </div>
         </div>
-
-        <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="bi bi-shield-check"></i>
-              <h3><a>Cybersecurity</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <i class="bi bi-infinity"></i>
-              <h3><a>Quantum</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <i class="bi bi-globe"></i>
-              <h3><a>Network Communication</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <i class="bi bi-filetype-ai"></i>
-              <h3><a>Generative AI</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="icon-box">
-              <i class="bi bi-fingerprint"></i>
-              <h3><a>Digital Forensics</a></h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1 content">
-            <h3 >Our Mission</h3>
-            <p class="fst-italic" style="margin-bottom: 5px;">
-            Our lab is dedicated to advancing the field of cybersecurity through innovative research that develops practical, effective solutions to protect individuals and organizations from modern digital threats. As cyber risks increasingly involve data-driven and AI-enabled techniques, we work to anticipate these emerging challenges while building defenses that remain adaptable over time.
-            Our mission is supported by: </p>
+        <!--
+        <section class="dark-bg text-center contact-wrap" id="SocialNetwork">
+          <div class="container">
+            <div class="row contact-details">
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><a href="https://www.linkedin.com/in/farah-kandah-1a440528/" target="_blank"><i class="fab fa-linkedin fa-3x"></i><span>Linkedin</span></a></h2>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><a href="https://scholar.google.com/citations?hl=en&user=8JH5MpIAAAAJ" target="_blank"><i class="fab fa-google fa-3x"></i><span>Google Scholar</span></a></h2>
+                 
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><a href="https://www.researchgate.net/profile/Farah-Kandah-2" target="_blank"><i class="fab fa-researchgate fa-3x"></i><span>Research gate</span></a></h2>
+                  
+                </div>
+              </div>
+            </div>-->
             
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Pushing the boundaries of cybersecurity and staying ahead of both traditional and AI-assisted threats,</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;"> <em>Adopting a collaborative, multidisciplinary approach grounded in strong scientific rigor and ethical conduct, and</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 5px;"> <em>Leveraging advanced technologies and Artificial Intelligence to better understand adversarial behavior and to design resilient countermeasures.</em></p>
-           
-
-            <p class="fst-italic"> We aim to make the digital world a safer place by developing practical tools, methods, and technologies that help individuals and organizations confidently navigate a rapidly evolving cyber landscape.</p>
-
-           
-           
-            <h3>Our Vision</h3>
-            <p class="fst-italic" style="margin-bottom: 5px;">
-            Our vision is a future where digital security is seamlessly integrated into everyday life, enabling people and organizations to safely and confidently operate in the digital world. As AI becomes a larger part of both attack and defense, we work to ensure that systems remain secure even as adversaries evolve.
-            We pursue this vision through:</p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Research that develops next-generation security techniques, privacy-preserving systems, and resilient architectures,</em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Strategic partnerships with academia and industry leaders to translate research into real-world solutions, and </em></p>
-            
-            <p class="bi bi-caret-right-fill" style="margin-bottom: 0px;">  <em>Continued investment in education and awareness to strengthen understanding of cybersecurity challenges–inclduing those shaped by AI capabilities.</em></p>
-            
-            <p class="fst-italic"> Our ultimate goal is to build a digital environment that remains secure and resilient even as new, increasingly AI-driven threats emerge—an environment where individuals and organizations can operate, innovate, and thrive with trust and confidence.
-
-            </p>
+            <!--
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="social-buttons">
+                  <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          -->
           </div>
-        </div>
+        </section>
 
-      </div>
-
-    </section><!-- /About Section -->
-
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="container section-title" data-aos="fade-up">
-        <h2>Our</h2>
-        <p> Collaborators</p>
-        </div><!-- End Section Title -->
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/mccrary.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/aurpi-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/TennTech.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/utc.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/mtsu.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/oak-ridge.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/arcanum.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/auehc-2.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Research</h2>
-        <p> Framework</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" >
-
-        <div class="row gy-4" >
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" >
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-shield-lock"></i>
+        <!--
+        -->
+        <section class="features text-center section-padding" id="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <!--<h1 class="arrow">Love what you do, and you'll do it well</h1>-->
+                <div class="features-wrapper">
+                  <div class="col-md-4 wp2">
+                    <div class="icon">
+                      <a href="GroupActivities.html"><i class="fa fa-building " aria-hidden="true" ></i></a>
+                    </div>
+                    <!--<h2>Group Activities</h2>-->
+                    <h2><a href="GroupActivities.html">Group Activities/Publications</a></h2>
+                  </div>
+                  <div class="col-md-4 wp2 delay-05s">
+                    <div class="icon">
+                      <!--<i class="fa fa-code shadow"></i>-->
+                      <a href="SelectedProjects.html"><i class="fas fa-tasks" aria-hidden="true"></i></a>
+                    </div>
+                    <h2><a href="SelectedProjects.html">Selected Projects</a></h2>
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
+                    primis in faucibus.</p>-->
+                  </div>
+                  <div class="col-md-4 wp2 delay-1s">
+                    <div class="icon">
+                      <!--<i class="ffa fa-spinner fa-spin fa-3x fa-fw shadow" aria-hidden="true"></i>-->
+                      <a href="OurTeam.html"><i class="fa fa-users"></i></a>
+                    </div>
+                    <h2><a href="OurTeam.html">Our Team</a></h2>
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
+                    primis in faucibus.</p>-->
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
               </div>
-              <a href="IoT-Systems.html" class="stretched-link">
-                <h3>Trust, Privacy, and Identity in IoT Systems</h3>
-              </a>
-              
-              <p><h3 style="color:#ffc451">Focus</h3>Developing scalable frameworks that ensure trustworthiness, authentication, and privacy protection across IoT ecosystem. Integrate trust propagation, device fingerprinting, and privacy-preserving methods supporting secure interactions between interconnected devices.
-
-              <h3 style="color:#ffc451">Key themes</h3>
-              IoT trust modeling | Zero-trust | Privacy-preserving data exchange | Traffic-based device profiling | AI-based Traffic obfuscation
-
-              <h3 style="color:#A33299"><br>Selected Projects ></h3>
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-incognito"></i>
-              </div>
-              <a href="Forensics-Integrity.html" class="stretched-link">
-                <h3>Digital Forensics and Media Integrity</h3>
-              </a>
-              <p><h3 style="color:#ffc451">Focus</h3>
-              Advancing multimedia forensics through techniques that detect hidden data, digital tampering, and manipulated content, ensuring authenticity and evidential reliability. Bridges AI-based image analysis with forensic validation to combat misinformation and cybercrime.
-
-
-              <h3 style="color:#ffc451">Key themes</h3>
-              Steganography | Deepfake detection | Metadata forensics | Image authentication | Forensic AI
-
-              <h3 style="color:#A33299"><br>Selected Projects ></h3>
-            
-            </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-exclamation-triangle"></i>
-              </div>
-              <a href="Data-Threat-Analytics.html" class="stretched-link">
-              <h3>Intelligent Data and Threat Analytics</h3>
-              </a>
-              <p><h3 style="color:#ffc451">Focus</h3>
-              Enhancing data quality, diversity, and resilience to improve the reliability of AI-driven detection systems. Addresses data imbalance, poisoning resistance, and representation learning to strengthen next-generation cyber defense capabilities.
-
-              <h3 style="color:#ffc451">Key themes</h3>
-              Data-centric AI | Intrusion detection | Synthetic data generation | Adversarial robustness | Explainable security models
-
-              <h3 style="color:#A33299"><br>Selected Projects ></h3>
-            </p>
-
-
-            </div>
-          </div><!-- End Service Item -->
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/cta-bg.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3 style="color:#ffc451">In a world of evolving cyber threats, we help you stay one step ahead</h3>
-              
-              <h5>In today’s digital landscape, trust depends on strong, AI-aware defense. At CNCL, we pair research-driven insight with hands-on expertise to help organizations anticipate, prevent, and respond to modern cyber risks. Drawing on our work in IoT trust and privacy, digital forensics, media integrity, and intelligent threat analytics, we assess security posture, identify AI-related vulnerabilities, and validate system resilience against emerging attack techniques. Whether you need to assess your security posture, test for vulnerabilities, or strengthen compliance, our team provides practical solutions grounded in data and experience. Explore our consulting and penetration testing services to see how we can help you build lasting resilience against evolving digital threats.
-</h5>
-              
-              
-              </p>
-            </p>
-              <!--<a class="cta-btn" href="#">Call To Action</a>-->
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-    </section><!-- /Call To Action Section -->
-
-    
-    <!-- Features Section -->
-    <section id="features" class="features section">
+        
 
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p> Check Our Lab</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/forensics-unsplash.jpg" alt=""></div>
-          <div class="col-lg-6">
-
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-cloud-arrow-down flex-shrink-0"></i>
-              <div>
-                <h4>Consultation</h4>
-                <p>We offer customized consulting services for organizations seeking to improve their cybersecurity posture or align with compliance standards.</p>
-                <p> <strong>Risk Assessment and Governance:</strong> Evaluate organizational policies, data flow, and access controls.</p>
-                <p> <strong>Security Architecture Review:</strong> Assess and redesign IT infrastructure for defense-in-depth.</p>
-                <p> <strong>Incident Response Planning:</strong> Develop and test response playbooks to reduce breach impact.</p>
-                <p> <strong>Compliance Support: </strong>Align with standards such as ISO 27001, NIST CSF, and HIPAA.</p>
-                <p> <strong>Awareness Training: </strong>Tailored sessions on phishing defense, password management, and secure system administration.</p>
-
+        
+        <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+          <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">Contact US</h1>
               </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-check flex-shrink-0"></i>
-              <div>
-                <h4>Penetration Testing</h4>
-                <p>Our team conducts controlled and ethical penetration tests to identify and mitigate vulnerabilities before attackers can exploit them.</p>
-                <p> <strong>Network Penetration Testing:</strong> Evaluate internal and external network exposure, misconfigurations, and privilege escalation risks.</p>
-                <p> <strong>IoT and Embedded Device Testing:</strong> Assess firmware, wireless protocols, and data leakage across connected devices.</p>
-                <p> <strong>Reporting and Recommendations:</strong> Each test concludes with a comprehensive report detailing vulnerabilities, exploit paths, severity levels, and mitigation strategies.</p>
+            </div>
+            <div class="row contact-details">
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fas fa-map-marker-alt"></i><span>Address</span></h2>
+                  <p>345 W Magnolia Ave, Auburn, AL 36849</p>
+                </div>
               </div>
-            </div><!-- End Features Item-->
-
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fas fa-mobile-alt"></i><span>Phone</span></h2>
+                  <p>+1-334-844-4833</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fas fa-at"></i><span>Email</span></h2>
+                  <p><a href="#">farah-kandah "AT" auburn.edu</a></p>
+                </div>
+              </div>
+            </div>
+            
+            <!--
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="social-buttons">
+                  <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          -->
           </div>
-        </div>
+        </section>
+        <footer>
 
-      </div>
-
-    </section><!-- /Features Section -->
-
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/nasa-unsplash.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              
-              <h3 style="color:#ffc451">Empowering Trust, Protecting Privacy, and Illuminating IoT</h3>
-              <h5>At CNCL, our research tackles the core challenges that shape modern cybersecurity– how to establish trust across IoT ecosystems, protect the integrity of digital media, and strengthen AI-driven detection systems against manipulation. We develop scalable frameworks for privacy preservation, create forensic techniques to uncover media manipulation, and design data-centric models that improve resilience against attacks. By advancing these technologies, we work to ensure that interconnected systems remain reliable, transparent, and secure, even as adversaries adopt more sophisticated methods.
-
-            </h5>
-              <!--<a class="cta-btn" href="#">Call To Action</a>-->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="legals">
+                  <!--<li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Legals</a></li>-->
+                  &copy; 2024 . Farah Kandah . All rights reserved. 
+                </ul>
+              </div>
+              <div class="col-md-6 credit">
+                <!--<p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Dr. K</a> exclusively for <a href="http://tympanus.net/codrops/"><em>Codrops</em></a></p>-->
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </footer>
 
-    </section><!-- /Call To Action Section -->
-
-    
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>our Current Team</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Kandah.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <!--<a href=""><i class="bi bi-twitter-x"></i></a>-->
-                  <a href="https://scholar.google.com/citations?user=8JH5MpIAAAAJ&hl=en" target='_blank'><i class="bi bi-google"></i></a>
-                  <!--<a href=""><i class="bi bi-instagram"></i></a>-->
-                  <a href="https://www.linkedin.com/in/farah-kandah-1a440528" target='_blank'><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Farah Kandah, PhD</h4>
-                <span>Director and Founder</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Mallory-Whitt.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://linkedin.com/in/mallorywhitt" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/mallorywhitt" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Mallory Whitt</h4>
-                <span>Lab Manager/Research Assistant</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Lalith.jpg" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="https://scholar.google.com/citations?user=f3WBbuIAAAAJ&hl=en" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/lmedury" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Lalith Medury</h4>
-                <span>Identify and Privacy Reserch Lead<br>PhD Candidate</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Haofan.png" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="" target='_blank'><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Haofan Wang</h4>
-                <span>Intelligant Data Research Lead<br>PhD Candidate</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Thilina.jpg" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="https://scholar.google.com/citations?user=c3gOcMEAAAAJ&hl=en" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://www.linkedin.com/in/thilina-mendis-ab433b93/" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/thilinamendis" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Thilina Mendis</h4>
-                <span>Forensics and Media Integrity Research Lead</span>
-                <span>PhD Student</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/LiamMaherHeadshot.jpg" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Liam Maher</h4>
-                <span>Forensics and Media Integrity Research</span>
-                <span>MS Cybersecurity Engineering</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Luke.jpg" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="https://scholar.google.com/citations?hl=en&user=931BSSQAAAAJ" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://www.linkedin.com/in/lukeerobinson/" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/lercc46" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Luke Robinson</h4>
-                <span>Researcher and Ethical Hacking team</span>
-                <span>MS Cybersecurity Engineering</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Hemant.jpg" class="img-fluid" alt="">
-                <div class="social">
-                   <a href="https://scholar.google.com/citations?hl=en&user=fkUYq3UAAAAJ" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://www.linkedin.com/in/hemantsherawat/" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/hzs0084" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Hemant Sharawat</h4>
-                <span>Researcher and Ethical Hacking team</span>
-                <span>MS Cybersecurity Engineering</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/TaiebaTasnim.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://scholar.google.com/citations?user=vodcKYEAAAAJ&hl=en" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://www.linkedin.com/in/taieba-tasnim/" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/taieba08" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Taieba Tasnim</h4>
-                <span>Researcher/PhD Student</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/Jarrod.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <!--<a href=""><i class="bi bi-twitter-x"></i></a>-->
-                  <!--<a href=""><i class="bi bi-facebook"></i></a>-->
-                  <a href="" target='_blank'><i class="bi bi-google"></i></a>
-                  <a href="https://www.linkedin.com/in/jarrod-hardy-2a107483/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target='_blank'><i class="bi bi-linkedin"></i></a>
-                  <a href="" target='_blank'><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Jarrod Hardy</h4>
-                <span>Researcher/PhD Student</span>
-                <span>Embedded Software Engineering Manager - Northrop Grumman</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-    
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Contact Us</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.9997815729175!2d-85.49004988734396!3d32.60618927362602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888cf31af17e641d%3A0x6d8a390b80a834f8!2sShelby%20Center!5e0!3m2!1sen!2sus!4v1761833947050!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div><!-- End Google Maps -->
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>345 W Magnolia Ave, Auburn, AL 36832</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>+1 334-844-4833</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>info@cybernetcomlab.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <div class="container text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">CNCL</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
-        </div>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.flexslider.js"></script>
+        <script src="js/modernizr.js"></script>
+      </body>
+    </html>
