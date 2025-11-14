@@ -1774,22 +1774,3 @@ section,
   background-color: #ffc451; /* or use #F6C765 if you prefer */
 }
 
-
-/*--------------------------------------------------------------
-# Image Swiper Glow Effect
---------------------------------------------------------------*/
-.image-frame:hover {
-  box-shadow: 0 0 20px rgba(246, 199, 101, 0.6);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-
-/*--------------------------------------------------------------
-# Image Swiper Frame around image
---------------------------------------------------------------*/
-.about .about-image-swiper img {
-  border: 5px solid #F6C765; /* color of the frame */
-  border-radius: 10px;       /* optional: rounded corners */
-  padding: 3px;              /* optional: spacing between border and image */
-  background-color: #fff;    /* optional: background behind the image */
-}
