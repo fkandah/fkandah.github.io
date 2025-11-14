@@ -1729,3 +1729,67 @@ section,
     user-select: none; /* Non-prefixed version, supported by all modern browsers */
     cursor: default; /* Optional: changes the cursor from text-select I-beam to default pointer */
 }
+
+/*--------------------------------------------------------------
+# Image swiper in the about section
+--------------------------------------------------------------*/
+
+/* Ensure slide images cover nicely and align top */
+.about .about-image-swiper .swiper-slide {
+  display: flex;
+  align-items: flex-start;
+}
+
+.object-fit-cover { object-fit: cover; }
+
+/* Consistent image height on desktop; relax on mobile */
+.about .about-image-swiper img {
+  width: 100%;
+  height: 420px;         /* adjust as desired */
+  border-radius: 12px;   /* optional */
+}
+
+@media (max-width: 991.98px) {
+  .about .about-image-swiper img {
+    height: 260px;       /* smaller height on mobile */
+  }
+}
+
+/* Center and style pagination */
+.about-swiper-pagination {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+.about-swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: #d6d6d6;
+  opacity: 1;
+}
+
+.about-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffc451; /* or use #F6C765 if you prefer */
+}
+
+
+/*--------------------------------------------------------------
+# Image Swiper Glow Effect
+--------------------------------------------------------------*/
+.image-frame:hover {
+  box-shadow: 0 0 20px rgba(246, 199, 101, 0.6);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Image Swiper Frame around image
+--------------------------------------------------------------*/
+.about .about-image-swiper img {
+  border: 5px solid #F6C765; /* color of the frame */
+  border-radius: 10px;       /* optional: rounded corners */
+  padding: 3px;              /* optional: spacing between border and image */
+  background-color: #fff;    /* optional: background behind the image */
+}
