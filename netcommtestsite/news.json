@@ -1,50 +1,37 @@
 [
   {
-    "title": "Paper accepted at IEEE Xplore",
-    "date": "Nov 15, 2025",
-    "datetime": "2025-11-15",
-    "url": "https://ieeexplore.ieee.org/",
+    "title": "Our Paper A Dynamic GAN-Based Obfuscation Approach Against Profiling Attacks was published at the 2025 IEEE 50th Conference on Local Computer Networks (LCN)",
+    "date": "Oct 2025",
+    "datetime": "2025-10",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11146296",
     "label": "Click here"
   },
   {
-    "title": "New dataset release: IoT Obfuscation Traces v1.2",
-    "date": "Nov 12, 2025",
-    "datetime": "2025-11-12"
+    "title": "Our Paper GANFUSION: GAN-Fused Synthetic Injection for Obfuscating Network Traffic Analysis was published at the 2025 IEEE Conference on Communications and Network Security (CNS)",
+    "date": "Sep 2025",
+    "datetime": "2025-9",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11194995",
+    "label": "Click here"
+  }, 
+  {
+    "title": "Our Paper Unmasking IoT Devices: A Dynamic and Adaptive Classification Approach was published in  IEEE Internet of Things Journal",
+    "date": "Aug 2025",
+    "datetime": "2025-8",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11131198",
+    "label": "Click here"
   },
   {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
+    "title": "Our Paper MATADOR: a magic matrix-based framework for tamper detection and image recovery was published in Journal of King Saud University Computer and Information Sciences",
+    "date": "Jun 2025",
+    "datetime": "2025-6",
+    "url": "https://link.springer.com/article/10.1007/s44443-025-00099-y",
+    "label": "Click here"
+  }, 
   {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
-  {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
-  {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
-  {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
-  {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
-  },
-  {
-    "title": "Guest talk: Privacy Leakage in Smart Homes",
-    "date": "Nov 8, 2025",
-    "datetime": "2025-11-08"
+    "title": "Our Paper Case-Based Reasoning with Diffusion Model for Ransomware Detection was published at the International Conference on Case-Based Reasoning (ICCBR 2025)",
+    "date": "Jun 2025",
+    "datetime": "2025-6",
+    "url": "https://link.springer.com/chapter/10.1007/978-3-031-96559-3_31",
+    "label": "Click here"
   }
-  
 ]
