@@ -50,6 +50,7 @@ button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-vis
 .snd svg{width:16px;height:16px;flex:none}
 .snd[aria-pressed="true"]{color:#E2B24B;border-color:#C9952E}
 .snd[aria-pressed="false"]{opacity:.7}
+.snd:disabled{opacity:.45;cursor:not-allowed;border-style:dashed}
 @media (max-width:560px){.audio{order:0}.snd span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 .tab{background:transparent;border:1px solid transparent;color:#E6E9D8;opacity:.75;font-family:var(--label);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px;padding:6px 10px;border-radius:3px}
 .tab[aria-current="true"]{opacity:1;border-color:#E2B24B;color:#E2B24B}
@@ -728,7 +729,7 @@ const show=id=>document.querySelectorAll("main>section").forEach(s=>s.hidden=s.i
 function go(h){if(location.hash.slice(1)===h)route();else location.hash=h?"#"+h:"#home"}
 function route(){
   if(cleanup){cleanup();cleanup=null}
-  active=null;keyHandler=null;
+  active=null;keyHandler=null;if(typeof setQuiet==="function")setQuiet(false);
   const h=location.hash.slice(1);const id=VIEWS[h]||"v-home";show(id);
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current",TABOF[h]===t.dataset.go?"true":"false"));
   ({"v-home":renderHome,"v-study":studySetup,"v-quiz":quizSetup,"v-games":renderGames,"v-rank":rankEnter,"v-missions":renderMap,"v-insp":inspSetup})[id]();
@@ -896,9 +897,10 @@ const qzType=()=>document.querySelector('input[name=qzType]:checked').value;
 const qzFmt=()=>document.querySelector('input[name=qzFmt]:checked').value;
 const DICTATE="Use your device's dictation instead: tap the microphone key on your phone or tablet keyboard, press Win+H on Windows, or press Fn twice (or the mic key) on a Mac. Your words go into the answer box and the app checks them the same way.";
 function syncQzType(){
-  const v=qzType()==="voice";$("#qzFmtRow").hidden=v;const n=$("#qzVoiceNote");n.hidden=!v;
+  const v=qzType()==="voice";$("#qzFmtRow").hidden=v;const n=$("#qzVoiceNote");n.hidden=!v;setQuiet(v);
   n.innerHTML=micBlocked?`<b>Microphone listening isn't available in this browser view.</b> ${DICTATE}`
     :`When a question appears, tap the microphone and say your answer. Your browser may ask for permission to use the microphone the first time. If listening doesn't work, you can dictate with your keyboard's microphone instead.`;
+  if(v)n.innerHTML+=` <b>Music and sound effects are paused during spoken answers</b> so the microphone only hears you.`;
 }
 document.querySelectorAll('input[name=qzType]').forEach(r=>r.onchange=syncQzType);
 function quizSetup(){$("#qzSetup").hidden=false;$("#qzPlay").hidden=true;syncQzType();
@@ -911,7 +913,7 @@ $("#qzStart").onclick=()=>{
 };
 function startQuiz(ids,retake,type,fmt){
   const kinds=ids.map(()=>type==="voice"?"voice":fmt==="mc"?"mc":fmt==="tf"?"tf":(Math.random()<.5?"mc":"tf"));
-  QZ={ids,kinds,k:0,res:[],retake,type,fmt};$("#qzSetup").hidden=true;$("#qzPlay").hidden=false;showQZ();window.scrollTo(0,0)}
+  QZ={ids,kinds,k:0,res:[],retake,type,fmt};setQuiet(type==="voice");$("#qzSetup").hidden=true;$("#qzPlay").hidden=false;showQZ();window.scrollTo(0,0)}
 const KIND={mc:"Multiple choice",tf:"True / False",voice:"Spoken"};
 function showQZ(){
   keyHandler=null;cleanup=stopListening;
@@ -1444,7 +1446,7 @@ function endInsp(){
   $("#camoG").innerHTML=out;
 })();
 /* ---------- sound: music and effects generated with Web Audio (no audio files) ---------- */
-const SND={ctx:null,music:false,fxOn:true,timer:0,next:0,step:0};
+const SND={ctx:null,music:false,fxOn:true,quiet:false,timer:0,next:0,step:0};
 try{const a=JSON.parse(localStorage.getItem("tigerCOTM.audio")||"{}");if(a.fx===false)SND.fxOn=false;if(a.music===true)SND.music=true}catch(e){}
 function audioSave(){try{localStorage.setItem("tigerCOTM.audio",JSON.stringify({fx:SND.fxOn,music:SND.music}))}catch(e){}}
 function actx(){
@@ -1484,9 +1486,9 @@ function playStep(step,t,sp){
   if(ph===1&&BUGLE_CALL[pb])BUGLE_CALL[pb].forEach(([st,f,len])=>{if(st===s)bugle(SND.mus,f,t,sp*len*.95,.06)});
 }
 function sched(){const c=SND.ctx,sp=60/112/4;while(SND.next<c.currentTime+.15){playStep(SND.step,SND.next,sp);SND.next+=sp;SND.step=(SND.step+1)%256}}
-function musicStart(){const c=actx();if(!c||SND.timer)return;SND.next=c.currentTime+.1;SND.step=0;SND.timer=setInterval(sched,25)}
+function musicStart(){if(SND.quiet)return;const c=actx();if(!c||SND.timer)return;SND.next=c.currentTime+.1;SND.step=0;SND.timer=setInterval(sched,25)}
 function musicStop(){clearInterval(SND.timer);SND.timer=0}
-function fxGo(fn){if(!SND.fxOn)return;const c=actx();if(!c)return;try{fn(c.currentTime+.01)}catch(e){}}
+function fxGo(fn){if(!SND.fxOn||SND.quiet)return;const c=actx();if(!c)return;try{fn(c.currentTime+.01)}catch(e){}}
 const sfx={
   ok:()=>fxGo(t=>{tone(SND.fx,{type:"triangle",f:659.25,t,dur:.1,g:.35});tone(SND.fx,{type:"triangle",f:987.77,t:t+.08,dur:.2,g:.35})}),
   no:()=>fxGo(t=>tone(SND.fx,{type:"square",f:155,f2:100,t,dur:.32,g:.22,lp:900})),
@@ -1498,13 +1500,19 @@ const sfx={
   promo:()=>fxGo(t=>{[[466.16,0,.14],[587.33,.15,.14],[698.46,.3,.14],[932.33,.45,.55]].forEach(([f,o,d])=>bugle(SND.fx,f,t+o,d,.22))}),
   win:()=>fxGo(t=>{[[349.23,466.16,587.33],[466.16,587.33,698.46]].forEach((ch,k)=>ch.forEach(f=>bugle(SND.fx,f,t+k*.28,k?.9:.24,.1)));noise(SND.fx,{t:t+.28,dur:.5,g:.15,freq:5000})})
 };
-document.addEventListener("visibilitychange",()=>{if(!SND.ctx)return;if(document.hidden){musicStop();SND.ctx.suspend().catch(()=>{})}else{SND.ctx.resume().catch(()=>{});if(SND.music)musicStart()}});
+document.addEventListener("visibilitychange",()=>{if(!SND.ctx)return;if(document.hidden){musicStop();SND.ctx.suspend().catch(()=>{})}else{SND.ctx.resume().catch(()=>{});if(SND.music&&!SND.quiet)musicStart()}});
 const ICON_MUSIC=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>`;
 const ICON_FX=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>`;
 function renderAudioBtns(){
-  const m=$("#btnMusic"),f=$("#btnFx");
-  m.innerHTML=ICON_MUSIC+`<span>Music ${SND.music?"on":"off"}</span>`;m.setAttribute("aria-pressed",SND.music);
-  f.innerHTML=ICON_FX+`<span>Sound ${SND.fxOn?"on":"off"}</span>`;f.setAttribute("aria-pressed",SND.fxOn);
+  const m=$("#btnMusic"),f=$("#btnFx"),q=SND.quiet;
+  m.innerHTML=ICON_MUSIC+`<span>Music ${q?"paused":SND.music?"on":"off"}</span>`;m.setAttribute("aria-pressed",SND.music&&!q);
+  f.innerHTML=ICON_FX+`<span>Sound ${q?"paused":SND.fxOn?"on":"off"}</span>`;f.setAttribute("aria-pressed",SND.fxOn&&!q);
+  [m,f].forEach(b=>{b.disabled=q;b.title=q?"Paused during spoken answers so the microphone only hears you":b===m?"Background music":"Sound effects"});
+}
+function setQuiet(on){
+  if(SND.quiet===on)return;SND.quiet=on;
+  if(on)musicStop();else if(SND.music&&SND.ctx)musicStart();
+  renderAudioBtns();
 }
 $("#btnMusic").onclick=()=>{SND.music=!SND.music;audioSave();renderAudioBtns();SND.music?musicStart():musicStop()};
 $("#btnFx").onclick=()=>{SND.fxOn=!SND.fxOn;audioSave();renderAudioBtns();if(SND.fxOn)sfx.ok()};
